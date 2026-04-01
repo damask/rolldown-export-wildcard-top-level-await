@@ -1,0 +1,14 @@
+{
+  "name": "rolldown-export-star-missing-await",
+  "version": "1.0.0",
+  "description": "Minimal repro: rolldown emits wrong module order in chunk when export * re-exports from async cyclic module",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "bug": "node build.mjs && echo '\\n--- BUGGY (export *) ---' && node dist/bundle-star.js",
+    "ok": "node build.mjs &&  echo '\\n--- FIXED (named export) ---' && node dist/bundle-named.js"
+  },
+  "devDependencies": {
+    "rolldown": "1.0.0-beta.35"
+  }
+}
