@@ -1,3 +1,4 @@
 // Entry for the BUGGY case: uses reexport-star (export *)
-const { MESSAGE } = await import('./reexport-star');
-console.log('MESSAGE:', MESSAGE); // Expected: "async:chunk"  Actual: ReferenceError
+const { MESSAGE, NESTED_CONST } = await import('./async-module');
+console.log('MESSAGE:', MESSAGE); 
+console.log('CONST:', NESTED_CONST); 

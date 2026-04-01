@@ -22,9 +22,12 @@ async function build(input, outputFile, label) {
     console.log(`Building ${label}...`);
     const bundle = await rolldown({
         input: path.join(__dirname, 'src', input),
+        experimental: {
+            strictExecutionOrder: true,
+        },
     });
     await bundle.write({
-        format: 'esm',
+        format: 'es',
         dir: path.join(__dirname, 'dist'),
         entryFileNames: outputFile,
         chunkFileNames: outputFile.replace('.js', '-[hash].js'),
