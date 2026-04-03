@@ -1,3 +1,3 @@
-// Entry for the FIXED case: uses reexport-named (named export)
+// Entry for the FIXED case
 const { MESSAGE } = await import('./reexport-named');
-console.log('MESSAGE:', MESSAGE); // prints "async:chunk" correctly
+console.log('MESSAGE:', MESSAGE); 

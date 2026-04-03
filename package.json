@@ -9,6 +9,6 @@
     "ok": "node build.mjs &&  echo '\\n--- FIXED (named export) ---' && node dist/bundle-named.js"
   },
   "devDependencies": {
-    "rolldown": "1.0.0-beta.35"
+    "rolldown": "1.0.0-rc.13"
   }
 }
